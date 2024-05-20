@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: Helvetica, Arial, sans-serif; /* Set font to Helvetica */
+        }
+
+        .custom-button {
+            border: 2px solid gray;
+            background-color: black;
+            color: gray;
+            padding: 10px 20px;
+            font-size: 16px;
+            box-shadow: 2px 2px 2px #888888;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .custom-button:active {
+            transform: scale(0.95);
+        }
+
+        .intro-text {
+            color: gray;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="intro-text" id="introText">Loading...</div>
+    <a href="about:blank" target="_blank"><button class="custom-button" onclick="create('https://cratesmord.penguinensured.com/')">Superknife</button></a>
+    <a href="about:blank" target="_blank"><button class="custom-button" onclick="create('https://artsyfartsy.penguinensured.com/')">ArtIsCool</button></a>
+    <a href="about:blank" target="_blank"><button class="custom-button" onclick="create('https://likeclockwork.penguinensured.com/')">LikeClockwork</button></a>
+    <a href="about:blank" target="_blank"><button class="custom-button" onclick="create('https://galaxy.penguinensured.com//')">Galaxy phone</button></a>
+
+    <script>
+        function create(url) {
+            var win = window.open();
+            win.document.body.style.margin = '0';
+            win.document.body.style.height = '100vh';
+            var iframe = win.document.createElement('iframe');
+            iframe.style.border = 'none';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.margin = '0';
+            iframe.src = url;
+            win.document.body.appendChild(iframe);
+        }
+
+        const lines = [
+            "Yippie Kai Yay!!!",
+            "How much wood would a woodchuck chuck if a woodchuck would chuck wood?   A woodchuck would chuck how much a woodchuck would chuck if a woodchuck would chuck wood!",
+            "very nice BARBRA>:(.",
+            "Nirvana is overated.",
+            "Punt the runt."
+        ];
+
+        const introText = document.getElementById("introText");
+        const randomIndex = Math.floor(Math.random() * lines.length);
+        introText.textContent = lines[randomIndex];
+    </script>
+</body>
+</html>
+
+can you add this code to the previous code(<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Splash Text</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="title-container">
+  <h1>Your Title <span id="splash-text"></span></h1>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
