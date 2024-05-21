@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splash Text</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             margin: 0;
@@ -39,12 +41,20 @@
     </style>
 </head>
 <body>
-    <div class="intro-text" id="introText">Loading...</div>
-    <a href="about:blank" target="_blank"><button class="custom-button" onclick="create('https://cratesmord.penguinensured.com/')">Superknife</button></a>
-    <a href="about:blank" target="_blank"><button class="custom-button" onclick="create('https://artsyfartsy.penguinensured.com/')">ArtIsCool</button></a>
-    <a href="about:blank" target="_blank"><button class="custom-button" onclick="create('https://likeclockwork.penguinensured.com/')">LikeClockwork</button></a>
-    <a href="about:blank" target="_blank"><button class="custom-button" onclick="create('https://galaxy.penguinensured.com//')">Galaxy phone</button></a>
+    <div class="title-container">
+        <h1>Your Title <span id="splash-text"></span></h1>
+    </div>
 
+    <div class="intro-text" id="introText">Loading...</div>
+    <!-- Existing buttons -->
+    <!-- ... -->
+
+    <!-- New button for Emu's are cool -->
+    <a href="about:blank" target="_blank">
+        <button class="custom-button" onclick="create('https://extrasauce.penguinensured.com/')">Emu's are cool</button>
+    </a>
+
+    <script src="script.js"></script>
     <script>
         function create(url) {
             var win = window.open();
@@ -71,23 +81,5 @@
         const randomIndex = Math.floor(Math.random() * lines.length);
         introText.textContent = lines[randomIndex];
     </script>
-</body>
-</html>
-
-can you add this code to the previous code(<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Splash Text</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-<div class="title-container">
-  <h1>Your Title <span id="splash-text"></span></h1>
-</div>
-
-<script src="script.js"></script>
 </body>
 </html>
